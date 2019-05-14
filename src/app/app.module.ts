@@ -7,7 +7,8 @@ import { BasicComponent } from './components/basic/basic.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogInService } from './components/login/login.service';
 import { BookListComponent } from './components/book-list/book-list.component';
-import { BookDataService } from './components/book-list/book-data.service';
+import { BookDataService } from './components/book-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BookDataService } from './components/book-list/book-data.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [LogInService, BookDataService],
   bootstrap: [AppComponent]
